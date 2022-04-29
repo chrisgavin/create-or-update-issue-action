@@ -1,0 +1,23 @@
+name: Create or Update Issue Action
+description: A GitHub Action that creates an issue or updates it if there's already an issue open with the same title.
+runs:
+  using: node16
+  main: ./bootstrap-shim.js
+inputs:
+  repository:
+    description: The repository to create the issue in.
+    required: true
+    default: ${{ github.repository }}
+  token:
+    description: The token to use for creating the issue.
+    required: true
+    default: ${{ github.token }}
+  title:
+    description: The title of the issue to create.
+    required: true
+  body:
+    description: The body of the issue to create.
+    required: false
+  assignees:
+    description: A comma-separated list of issue assignees.
+    required: false

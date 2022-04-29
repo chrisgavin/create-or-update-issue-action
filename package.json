@@ -1,0 +1,29 @@
+{
+	"name": "create-or-update-issue-action",
+	"version": "0.0.0",
+	"description": "A GitHub Action that creates an issue or updates it if there's already an issue open with the same title.",
+	"scripts": {
+		"build": "tsc",
+		"lint": "eslint --max-warnings=0 ./src/",
+		"test": "jest",
+		"bootstrap": "npm install && npm run build && npm prune --production"
+	},
+	"license": "MIT",
+	"dependencies": {
+		"@actions/core": "^1.6.0",
+		"@octokit/rest": "^18.12.0",
+		"source-map-support": "^0.5.21"
+	},
+	"devDependencies": {
+		"@tsconfig/node16": "^1.0.2",
+		"@types/jest": "^27.4.0",
+		"@types/source-map-support": "^0.5.4",
+		"@typescript-eslint/eslint-plugin": "^4.33.0",
+		"@typescript-eslint/parser": "^4.33.0",
+		"eslint": "^7.32.0",
+		"jest": "^26.6.3",
+		"ts-jest": "^26.5.6",
+		"ts-node": "^10.4.0",
+		"typescript": "^4.5.5"
+	}
+}
