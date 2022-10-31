@@ -26,8 +26,14 @@ async function createOrUpdateIssue():Promise<number> {
 			issue_number: matchingIssues[0].number,
 			body: inputs.get().body,
 			assignees: inputs.get().assignees,
+			state: inputs.get().close ? "closed" : "open",
 		});
 		return matchingIssues[0].number;
+	}
+
+	if (inputs.get().close) {
+		core.info("No issue found to close.");
+		return 0;
 	}
 
 	const createdIssue = await githubClient.issues.create({

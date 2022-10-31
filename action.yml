@@ -21,3 +21,7 @@ inputs:
   assignees:
     description: A comma-separated list of issue assignees.
     required: false
+  close:
+    description: Close the issue if it already exists.
+    required: false
+    default: "false"
