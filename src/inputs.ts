@@ -6,6 +6,7 @@ export class Inputs {
 	"title" = core.getInput("title", {required: true});
 	"body"? = core.getInput("body", {required: false});
 	"assignees"? = core.getInput("assignees", {required: false})?.split(",");
+	"close"? = core.getInput("close", {required: false}) === "true";
 }
 
 export function get():Inputs {
