@@ -20,12 +20,13 @@ async function createOrUpdateIssue():Promise<number> {
 	const matchingIssues = issues.filter(issue => issue.pull_request === undefined && issue.title === inputs.get().title);
 	if (matchingIssues.length > 0) {
 		core.info(`Found existing issue ${matchingIssues[0].number}.`);
+		const assignees = !inputs.get().close ? inputs.get().assignees : undefined;
 		githubClient.issues.update({
 			owner: repositoryOwner,
 			repo: repositoryName,
 			issue_number: matchingIssues[0].number,
 			body: inputs.get().body,
-			assignees: inputs.get().assignees,
+			assignees: assignees,
 			state: inputs.get().close ? "closed" : "open",
 		});
 		return matchingIssues[0].number;
