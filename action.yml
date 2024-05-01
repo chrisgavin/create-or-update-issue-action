@@ -1,7 +1,7 @@
 name: Create or Update Issue Action
 description: A GitHub Action that creates an issue or updates it if there's already an issue open with the same title.
 runs:
-  using: node16
+  using: node20
   main: ./bootstrap-shim.js
 inputs:
   repository:
