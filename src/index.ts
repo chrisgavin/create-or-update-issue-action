@@ -1,7 +1,7 @@
 import * as core from "@actions/core";
-import * as inputs from "./inputs";
+import * as inputs from "./inputs.js";
 import * as octokit from "@octokit/rest";
-import * as outputs from "./outputs";
+import * as outputs from "./outputs.js";
 import sourceMapSupport from "source-map-support";
 
 function getRepository() {
