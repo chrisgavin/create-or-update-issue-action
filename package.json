@@ -2,6 +2,7 @@
 	"name": "create-or-update-issue-action",
 	"version": "0.0.0",
 	"description": "A GitHub Action that creates an issue or updates it if there's already an issue open with the same title.",
+	"type": "module",
 	"scripts": {
 		"build": "tsc",
 		"lint": "eslint --max-warnings=0 ./src/",
