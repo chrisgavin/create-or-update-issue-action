@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout
-        uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - name: Prepare NodeJS
         uses: chrisgavin/nodejs-prepare-action@5a9adfe1877a3a3f114772464efcc7d20df36847
       - name: Install Dependencies
