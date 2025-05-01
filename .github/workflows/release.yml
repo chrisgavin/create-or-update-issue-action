@@ -14,7 +14,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
       - name: Prepare NodeJS
-        uses: chrisgavin/nodejs-prepare-action@5a1020765fb8d35d7121d14bd18fc1a4421aa4ca
+        uses: chrisgavin/nodejs-prepare-action@7b5f9b248f3bfec14724678b20b97d027a879917
       - name: Install Dependencies
         run: npm ci
       - name: Create the Release
