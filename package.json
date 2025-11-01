@@ -19,7 +19,7 @@
 		"@tsconfig/node20": "^20.1.6",
 		"@types/jest": "^30.0.0",
 		"@types/source-map-support": "^0.5.10",
-		"eslint": "^9.36.0",
+		"eslint": "^9.39.0",
 		"jest": "^30.2.0",
 		"ts-jest": "^29.4.5",
 		"ts-node": "^10.9.2",
