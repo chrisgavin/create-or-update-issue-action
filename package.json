@@ -6,7 +6,7 @@
 	"scripts": {
 		"build": "tsc",
 		"lint": "eslint --max-warnings=0 ./src/",
-		"test": "jest",
+		"test": "vitest run",
 		"bootstrap": "npm install && npm run build && npm prune --production"
 	},
 	"license": "MIT",
@@ -17,13 +17,11 @@
 	},
 	"devDependencies": {
 		"@tsconfig/node20": "^20.1.6",
-		"@types/jest": "^30.0.0",
 		"@types/source-map-support": "^0.5.10",
 		"eslint": "^9.39.0",
-		"jest": "^30.2.0",
-		"ts-jest": "^29.4.5",
 		"ts-node": "^10.9.2",
 		"typescript": "^5.9.3",
-		"typescript-eslint": "^8.46.2"
+		"typescript-eslint": "^8.46.2",
+		"vitest": "^2.1.8"
 	}
 }
