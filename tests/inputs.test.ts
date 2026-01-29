@@ -1,15 +1,22 @@
-import * as inputs from "../src/inputs";
 import * as core from "@actions/core";
-import { describe, it, expect, vi } from "vitest";
+import { describe, it, expect, vi, beforeEach } from "vitest";
+
+vi.mock("@actions/core");
 
 describe("test get().assignees", () => {
+	beforeEach(() => {
+		vi.resetModules();
+	});
+
 	it("should be the split assignees", async () => {
-		vi.spyOn(core, "getInput").mockImplementation((input:string) => {
+		vi.mocked(core.getInput).mockImplementation((input: string) => {
 			if (input === "assignees") {
 				return "mona,lisa";
 			}
 			return "";
 		});
+
+		const inputs = await import("../src/inputs");
 		expect(inputs.get().assignees).toEqual(["mona", "lisa"]);
 	});
 });
