@@ -1,12 +1,13 @@
 {
 	"extends": "@tsconfig/node20/tsconfig.json",
 	"compilerOptions": {
+		"rootDir": "./src/",
 		"outDir": "./build/",
 		"sourceMap": true,
 		"experimentalDecorators": true,
 		"emitDecoratorMetadata": true,
-		"module": "es2022",
-		"moduleResolution": "node"
+		"module": "node16",
+		"moduleResolution": "node16"
 	},
 	"include": [
 		"./src/"
