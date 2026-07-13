@@ -1,0 +1,16 @@
+{
+	"$schema": "./node_modules/oxlint/configuration_schema.json",
+	"plugins": [
+		"typescript"
+	],
+	"options": {
+		"maxWarnings": 0
+	},
+	"categories": {
+		"correctness": "error"
+	},
+	"ignorePatterns": [
+		"build/**",
+		"bootstrap-shim.js"
+	]
+}
